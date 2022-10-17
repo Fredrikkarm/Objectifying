@@ -9,6 +9,8 @@ public class JSONReader {
 	File file = new File("src/sample.json");
 	Scanner sc;
 	
+	
+	//this method was used only for testing purposes
 	public String printJSON() {
 		try {
 			sc = new Scanner(file);
@@ -32,6 +34,11 @@ public class JSONReader {
 		}
 		return null;
 	}
+	
+	//same thing as in CSVReader these methods are very similar but more or less the same
+	//check CSVReader for more in-depth commenting for one of the methods
+	//the difference is that im splitting it up differently because this is a JSON file and not a CSV file but the functionality is the same
+	
 	
 	public ArrayList<String> getOrderDate() {
 		try {

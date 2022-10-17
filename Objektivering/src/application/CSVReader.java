@@ -7,9 +7,11 @@ import java.util.Scanner;
 
 public class CSVReader {
 
+	//reading the file
 	File file = new File("src/sample.csv");
 	Scanner sc; // = new Scanner(file);
 
+	//method that im not using for anything else than testing
 	public String printCSV() {
 		try {
 			sc = new Scanner(file);
@@ -34,20 +36,34 @@ public class CSVReader {
 		return null;
 	}
 
+	//rather than commenting on each of the following methods they are more or less the same
+	//the only difference is that im getting the result im looking for
+	
+	//creating a ArrayList of type String called getOrderDate
 	public ArrayList<String> getOrderDate() {
 		try {
+			//reading the file with a scanner
 			sc = new Scanner(file);
+			//Creating an ArrayList of type String called Orderdate
 			ArrayList<String>Orderdate = new ArrayList<String>();
+			//simple while loop that runs for as long as scanner has next
 			while(sc.hasNext()) {
+				//creating ArrayList of type String called row
 				ArrayList<String> row = new ArrayList<String>();
+				//adding the nextline to row
 				row.add(sc.nextLine());
 				
+				//for every order in row
 				for(var order : row) {
+					//creating a String array and splitting it
 					String[] arr = order.split(",");
+					//saving the first value as orderDate
 					String orderDate = arr[0];
+					//adding orderDate to orderdate
 					Orderdate.add(orderDate);
 				}	
 			}
+			//returning Orderdate when method is called
 			return Orderdate;
 			
 		} catch (FileNotFoundException e) {

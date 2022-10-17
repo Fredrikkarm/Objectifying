@@ -13,6 +13,9 @@ public class CSVBean {
 	private String total;
 	
 	
+	
+	//simple bean that takes in the information i need i the parameters, to keep it simple
+	//i've chosen to use everything other than units as a String
 	public CSVBean(String orderDate, String region, String rep1, String rep2, String item, int units,
 			String unitCost, String total) {
 		

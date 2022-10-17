@@ -11,7 +11,8 @@ public class JSONBean {
 	private String unitCost;
 	private String total;
 	
-	
+	//more or less a copy paste from CSVBean as it servs the same purpose, could've used the same Bean
+	//mostly auto generated
 	public JSONBean(String orderDate, String region, String rep1, String rep2, String item, int units,
 			String unitCost, String total) {
 		
